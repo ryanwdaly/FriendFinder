@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'SimpsonFont';
+    src: url('../assets/SimpsonFont.ttf');
+}
+
+#title {
+    font-family: 'SimpsonFont';
+    color: #fbd449;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 395px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 315px;
+}
+
+body {
+    background-color: #2e89d5;
+}
+
+a {
+    padding-top: 35px;
+    display: block;
+    text-align: center
+}
+#survey-btn {
+    background-color: #fbd449;
+    color: #2e89d5;
+    font-weight: bold;
+}
+div label {
+    display: inline;
+}
+
+.question {
+    width: 400px;
+}
