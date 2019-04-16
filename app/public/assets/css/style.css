@@ -35,3 +35,16 @@ a {
     font-weight: bold;
     border-radius: 25px;
 }
+.question-label {
+    font-family: SimpsonFont;
+    color: #fbd449;
+    font-size: 26px;
+    padding-top: 20px;
+}
+.question-label span {
+    color: white;
+}
+
+.question-container {
+    padding: 10px;
+}

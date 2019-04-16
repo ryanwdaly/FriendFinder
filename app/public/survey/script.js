@@ -1,8 +1,13 @@
 $(document).ready(function(){
     $('select').formSelect();
 
-    $("#submitBtn").on("click", function(event) {
+    $("#survey-btn").on("click", function(event) {
         event.preventDefault();
+
+        $("#q1 input " + 1).on("change") {
+            alert("hello")
+        }
+
 
         var newUser = {
             name: $("#name").val().trim(), 
