@@ -3,39 +3,35 @@ $(document).ready(function(){
 
     $("#survey-btn").on("click", function(event) {
         event.preventDefault();
-
-        $("#q1 input " + 1).on("change") {
-            alert("hello")
-        }
-
-
-        var newUser = {
+        
+        let newUser = {
             name: $("#name").val().trim(), 
             photo: $("#photo").val().trim(), 
-            scores: [
-                $("#question1").val(), 
-                $("#question2").val(), 
-                $("#question3").val(), 
-                $("#question4").val(), 
-                $("#question5").val(), 
-                $("#question6").val(), 
-                $("#question7").val(), 
-                $("#question8").val(), 
-                $("#question9").val(), 
-                $("#question10").val() 
-            ]
+            scores: []
         };
+        newUser.scores[0] = null;
+        console.log("name: " + newUser.name);
+        console.log("photo: " + newUser.photo);
 
-
-
-
-        var currentURL = window.location.origin;
+        getValue(newUser)
+        location.href = "../result.html";
+  
+        // var currentURL = window.location.origin;
         $.post("/api/friends", newUser).done( function (data) {
             console.log(data.name)
             $("#bestFriend").text(data.name);
             $("#bestFriendPhoto").attr("src", data.photo);
-            $("#bestFriendModal").modal("toggle");
+            // $("#bestFriendModal").modal({
+            //     show: 'true'
+            // });
         });
     });
+    function getValue(newUser) {
+        for(let i = 1; i <= 10; i++) {
+            newUser.scores[i] = $('input[name=group' + i + ']:checked', '#survey').val();
+            console.log('question' + i + ': ' + $('input[name=group' + i + ']:checked', '#survey').val()); 
+        }
+    }
 
 });
+
