@@ -10,20 +10,18 @@ $(document).ready(function(){
             scores: []
         };
         newUser.scores[0] = null;
-        console.log("name: " + newUser.name);
         console.log("photo: " + newUser.photo);
-
-        getValue(newUser)
-        location.href = "../result.html";
-  
-        // var currentURL = window.location.origin;
+        
+        getValue(newUser);
+        // location.href = "../result";
+        console.log("name: " + newUser.name);
+      
         $.post("/api/friends", newUser).done( function (data) {
             console.log(data.name)
+            $(".modal").modal();
             $("#bestFriend").text(data.name);
             $("#bestFriendPhoto").attr("src", data.photo);
-            // $("#bestFriendModal").modal({
-            //     show: 'true'
-            // });
+            $(".modal").modal("open")
         });
     });
     function getValue(newUser) {

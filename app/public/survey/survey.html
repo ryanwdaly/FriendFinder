@@ -259,16 +259,16 @@
         </form>
 
         <div class="text-center" >
-                <a href="../survey/survey.html"><button id="survey-btn" class="btn btn-lg btn-success">Submit!</button></a>
+                <a href="../survey/survey.html"><button data-target="bestfFriendModal" id="survey-btn" class="btn btn-lg btn-success" ">Submit!</button></a>
         </div>
     
         <!-- Modal after survey completion -->
-        <!-- <div id="bestFriendModal" class="modal fade" role="dialog">
+        <div id="bestFriendModal" class="modal" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modal-title">Your New Best Friend</h1>
+                        <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+                        <h3 id="title" class="modal-title">Your New Best Friend:</h1>
                     </div>
                     <div class="modal-body">
                         <h2 id="bestFriend"></h2>
@@ -276,7 +276,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+
+        </div>
     </div>
     
 </body>

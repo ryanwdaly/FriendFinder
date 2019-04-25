@@ -7,13 +7,9 @@ module.exports = function(app) {
         res.json(friends);
     }); 
 
-    
-    app.post("/api/friends", function(req, res) {
-        
-        
+    app.post("/api/friends", function(req, res) { 
         user = req.body; 
-        
-        //
+    
         for (i = 0; i < user.scores.length; i++) {
             user.scores[i] = parseInt(user.scores[i]);
         }
@@ -38,7 +34,8 @@ module.exports = function(app) {
         friends.push(user);
 
         // send back to browser the best friend match
-
         res.json(bestMatch);
-});
+    });
+
+
 }
